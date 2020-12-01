@@ -7,4 +7,11 @@ describe('copyAndPush', () => {
         const actual = copyAndPush(numberArray, 4);
         expect(actual).toEqual([1, 2, 3, 4]);
     });
+
+    it('does not mutate original array', () => {
+        const numberArray = [1, 2, 3];
+
+        copyAndPush(numberArray, 4);
+        expect(numberArray).toEqual([1, 2, 3]);
+    });
 });

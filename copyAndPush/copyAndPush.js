@@ -1,7 +1,7 @@
 
 function copyAndPush(arr, num) {
-    arr.push(num);
-    return arr;
+    const newArr = [...arr, num];
+    return newArr;
 }
 
 module.exports = {
