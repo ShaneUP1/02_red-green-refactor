@@ -1,16 +1,12 @@
 
 
 function capitalizeAndFilter(arr) {
-    let newArr = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        const newString = arr[i].toUpperCase();
-        if (newString.charAt(0) === 'F') {
-            continue;
-        }
-        newArr.push(newString);
-    }
-    return newArr;
+    return arr.map(word => {
+        return word.toUpperCase();
+    })
+        .filter(word => {
+            return !word.startsWith('F');
+        });
 }
 
 module.exports = {
